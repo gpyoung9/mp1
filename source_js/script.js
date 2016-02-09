@@ -1,16 +1,32 @@
-var divs = document.getElementsByTagName('div');
-for(var i=0; i<divs.length; i++) {
-  divs[i].addEventListener("click", highlightThis);
-  /*
-  divs[i].addEventListener("click", highlightThis, true);
-  divs[i].addEventListener("click", highlightThis, false);*/
-}
+// var divs = document.getElementsByTagName('div');
+// for(var i=0; i<divs.length; i++) {
+//   divs[i].addEventListener("click", highlightThis);
+  
+//   divs[i].addEventListener("click", highlightThis, true);
+//   divs[i].addEventListener("click", highlightThis, false);
+// }
 
-function highlightThis(event) {
-    //event.stopPropagation();
+// function highlightThis(event) {
+//     //event.stopPropagation();
 
-    var backgroundColor = this.style.backgroundColor;
-    this.style.backgroundColor='yellow';
-    alert(this.className);
-    this.style.backgroundColor=backgroundColor;
-}
+//     var backgroundColor = this.style.backgroundColor;
+//     this.style.backgroundColor='yellow';
+//     alert(this.className);
+//     this.style.backgroundColor=backgroundColor;
+// }
+
+
+$("a[href^="#"]").on('click', function(e) {
+   e.preventDefault();
+   $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+     }, 300);
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});

@@ -4,3 +4,113 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+/*.nav-bar {
+	background-color: #333;
+}
+
+.nav-bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.nav-bar li {
+	float: right;
+}
+
+.nav-bar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.nav-bar a:hover:not(.active) {
+	background-color: #111;
+}
+
+.nav-bar .active {
+	background-color: #4CAF50;
+}*/
+
+nav {
+
+	.nav-bar {
+		background-color: #333;
+		display: table;
+		/*padding-top: 60px*/
+
+		ul {
+			list-style-type: none;
+			height: $navbar-height_large;
+			/*height: 60px;*/
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		li {
+			float: right;
+		}
+
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			color: white;
+			text-align: center;
+			padding: 22px;
+			text-decoration: none;
+		}
+		
+		a:hover:not(.active) {
+			background-color: #111;
+		}
+
+		.active {
+			background-color: #4CAF50;
+		}
+	}
+}
+
+nav .shrink {
+	height: $navbar-height_small;
+}
+
+body {
+	padding-top: 100px;
+	background-image: url(./../media/grass.jpg);
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+  	background-size: cover;
+}
+
+section {
+	/*background-color: rgba(45,179,74,0.7);*/
+	background-color: 	rgba(213, 167, 97, 1);
+	/*opacity: 0.4;*/
+	display: block;
+	/*color: #fff;*/
+	padding: 24px 15px;
+	text-align: center;
+	margin: 0 1.5% 24px 1.5%;
+}
+
+header {
+	text-align: center;
+	height: 750px;
+	h1 {
+		font-size: 5rem;
+	}
+}
