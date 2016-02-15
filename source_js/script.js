@@ -23,11 +23,12 @@ $(window).scroll(function() {
     	var position = $(sections[i]).position();
     	var height = $(sections[i]).height();
     	if (curr_val >= position.top && curr_val <= position.top + height){
-    		var id = $(sections[i]).attr('id') + "-link";
+    		var id = '#' + $(sections[i]).attr('id') + "-link";
     		console.log(id);
     		$(id).addClass('active');
     		if (i > 0){
     			$(id).removeClass('active');
+    			// remove from all others.
     		}
     	}
 
@@ -35,7 +36,7 @@ $(window).scroll(function() {
 	var scrollHeight = $(document).height();
 	var scrollPosition = $(window).height() + $(window).scrollTop();
 	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-	    var id = $(sections[sections.length - 1]).attr('id') + "-link";
+	    var id = '#' + $(sections[sections.length - 1]).attr('id') + "-link";
 	    console.log(id);
 	    $(id).addClass('active');
 	    if (i > 0){

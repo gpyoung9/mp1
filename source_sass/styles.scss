@@ -72,11 +72,12 @@ body {
 }
 
 section {
-	background-color: rgba(213, 167, 97, 1);
+	background-color: $tan;
 	display: block;
 	padding: 24px 15px;
 	text-align: center;
 	margin: 0 1.5% 24px 1.5%;
+	border-radius: 15px;
 }
 
 header {
@@ -85,9 +86,14 @@ header {
 	padding-top: 125px;
 	text-align: center;
 	height: 550px;
+	
 	h1 {
 		padding-bottom: 60px;
 		font-size: 5rem;
+	}
+
+	#video-content {
+		border-radius: 10px;
 	}
 }
 
@@ -106,35 +112,38 @@ header {
 		height: 250px;
 		width: 250px;
 		border-radius: 125px;		
-		background-color: $green; /* Green */
+		background-color: $green; 
 	    border: none;
 	    color: white;
 	    text-align: center;
 	    text-decoration: none;
+	    position: relative;
 	}
 
 	#food-button {
 		height: 250px;
 		width: 250px;
 		border-radius: 125px;		
-		background-color: $orange; /* Orange */
+		background-color: $orange; 
 	    border: none;
 	    color: white;
 	    margin-left: 100px;
 	    text-align: center;
 	    text-decoration: none;
+	    position: relative;
 	}
 
 	#pets-button {
 		height: 250px;
 		width: 250px;
 		border-radius: 125px;		
-		background-color: $brown; /* Brown */
+		background-color: $brown; 
 	    border: none;
 	    color: white;
 	    margin-left: 100px;
 	    text-align: center;
 	    text-decoration: none;
+	    position: relative;
 	}
 
 	button .button-active {
@@ -152,7 +161,9 @@ header {
 	}
 
 	button:hover .button-hover {
-		display: inline;
+		/*height: 128px;*/
+		/*width: 128px;*/
+		display: block;
 	}
 
 	.modal {
@@ -171,7 +182,7 @@ header {
 	}
 
 	.modal-content {
-	    background-color: #fefefe;
+	    background-color: $tan;
 	    margin: 15% auto; 
 	    padding: 20px;
 	    border: 1px solid #888;
@@ -181,17 +192,30 @@ header {
     	z-index: 99999;
 
     	h2 {
-    		font-size: 24px;
+    		font-size: 36px;
     		font-style: bold;
     		color: $brown;
     		padding-bottom: 20px;
-	    	/*z-index: 99999;*/
+
+	    	#types-link {
+    			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	    		color: $green;
+	    	}
+
+	    	#food-link {
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				color: $orange;
+	    	}
+
+	    	#pets-link {
+	    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	    		color: $brown;
+	    	}
     	}
 
 		#facts-list {
 			list-style-type: disc;
 			text-align: left;
-	    	/*z-index: 99999;*/
 
 			li {
 				margin: 0 0 10px 0;
@@ -208,7 +232,6 @@ header {
 
 		#pets-list {
 			@include columns(2);
-	    	/*z-index: 99999;*/
 		}
 
     	.box {
@@ -216,25 +239,21 @@ header {
 
 			@include break-after(always);
 			text-align: left;
-        	/*z-index: 99999;*/
-	}
-
-    	/*.citation {
-    		display: inline;
-    		font-size: 10px;
-    		float: right;
-    	}*/
+		}
 	}
 
 	#types-close {
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 		color: $green;
 	}
 
 	#food-close {
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 		color: $orange;
 	}
 
 	#pets-close {
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 		color: $brown;
 	}
 
@@ -350,28 +369,19 @@ header {
 
 footer {
 
-	.contact-content-outer {
+	/*.contact-content-outer {*/
 		
-		.contact-content-inner {
-			/*display: inline-block;	*/
-		
-			/*ul {*/
-				/*list-style-type: none;*/
-				/*margin: 0 auto;*/
-			/*}*/
+		/*.contact-content-inner {*/
+	display: inline;
+	text-align: center;
+	background-color: $brown;
 
-			/*li {*/
-				display: inline;
-				text-align: center;
-				/*margin: 0 auto;*/
-			/*}*/
-		
-			.icon {
-				display: inline;
-				height: 60px;
-				width: 60px;
-			}
-		}
+	.icon {
+		display: inline;
+		height: 60px;
+		width: 60px;
 	}
+		/*}*/
+	/*}*/
 }
 
