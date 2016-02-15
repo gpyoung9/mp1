@@ -6,111 +6,243 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
+
   <nav>
-    <div class="nav-bar">
+    <div id="nav-bar">
       <ul class="sections">
-        <div class="links">
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#pictures">Pictures</a></li>
-          <li><a href="#about">About Rabbits</a></li>
-          <li><a class="active" href="#home">Home</a></li>
+        <div id ="links">
+          <li id="contact-link" class="nav-link"><a href="#contact">Contact</a></li>
+          <li id="pictures-link" class="nav-link"><a href="#pictures">Pictures</a></li>
+          <li id="about-link" class="nav-link"><a href="#about">About Rabbits</a></li>
+          <li id="home-link" class="nav-link"><a href="#home">Home</a></li>
         </div>
       </ul>
     </div>
   </nav>
-  <header>
+
+  <header id="home" class="sections">
     <title>ayy lmao</title>
-    <h1>WHY RABBITS ARE CUTER THAN FENNEC FOXES</h1>
+    <h1>BUNNIES</h1>
+    <video autoplay muted loop>
+      <source src="./media/bunny_cups.mp4" type="video/mp4">
+    </video>
   </header>
-  <section id="about" class="section-Video">
-    <div class="video-content"></div>
+  <section id="about" class="sections">
     <div class="text-content">
       <h1>About Rabbits</h1>
+
+      <div class="columns">
+
+        <button id="types-button">
+          <img id="types-picture" src="./media/white-rabbit.png" class="button-active">
+          <span class="button-hover">Facts</span>
+        </button>
+
+
+        <div id="types" class="modal">
+          <div class="modal-content">
+            <span id="types-close" class="close">X</span>
+            <h2 class="modal-title">
+              <a href="http://www.onekind.org/education/animals_a_z/rabbit">Facts</a>
+            </h2>
+            <ul id="facts-list">
+              <li>Rabbits have an excellent sense of smell, hearing and vision. They have nearly 360° panoramic vision, allowing them to detect predators from all directions. They can see everything behind them and only have a small blind-spot in front of their nose.</li>
+              <li>Rabbits have extremely strong hind limbs which allow them to leap great distances. They can jump up to one metre high and three metres long.</li>
+              <li>Rabbits are territorial animals which live in loosely organised social groups. They live in warrens comprising of an intricate series of underground tunnels with different entrances and exits.</li>
+              <li>When rabbits ‘binky’, this is an expression of joy. They will run, jump into the air, twist their body and flick their feet.</li>
+              <li>Rabbits are affectionate social animals that enjoy the company of other rabbits. They will perform allogrooming where two individuals will simultaneously groom each other.</li>
+              <li>Although typically very quiet, rabbits do communicate vocally, with varying types of vocalisations communicating different messages, e.g. low humming when running around an individual is a signal of affection.</li>
+              <li>Rabbits stand upright on their hind legs to give themselves a better vantage point to look for predators. They alert other rabbits to the presence of danger by thumping their hind legs.</li>
+              <li>Rabbits should be kept in pairs. Companionship is key to the welfare of rabbits – without the company of another neutered rabbit they get lonely and bored. In the wild, rabbits are social creatures, a fact that doesn’t change just because they are kept as pets.</li>
+              <li>Rabbits need an appropriate diet. Fibre, in the form of hay and grass, is the most vital food for rabbits – it’s essential for their digestive health, and they can die without it. Whilst a small daily amount of green veg is good, a diet based solely on vegetables, fruit and carrots does not provide all the nutrients that rabbits need, leaving them malnourished.</li>
+              <li>Rabbits kept as pets should be offered shelter and hiding places - rabbits confined to open spaces with no protection will feel threatened. Predators such as dogs may also scare prey species such as rabbits.</li>
+            </ul>
+          </div>
+        </div>
+
+        <button id="food-button">
+          <img id="food-picture" src="./media/carrot_ico.png" class="button-active">
+          <span class="button-hover">Food that Rabbits Eat</span>
+        </button>
+
+        <div id="food" class="modal">
+          <div class="modal-content">
+            <span id="food-close" class="close">X</span>
+            <h2 class="modal-title">
+              <a href="http://www.saveafluff.co.uk/rabbit-info/safe-foods-for-rabbits" target="_blank">Food that Rabbits Eat</a> 
+            </h2>
+            <div id="food-list">
+              <div class="box">
+                <pre><u>Which vegetables can rabbits eat?</u>
+
+Artichoke leaves
+Asparagus
+Baby Sweetcorns
+Beetroot 
+Broccoli 
+Brussel Sprouts 
+Cabbage 
+Carrots 
+Cauliflower 
+Celery leaves
+Courgette 
+Cucumber
+Fennel
+Green beans
+Peas 
+Peppers 
+Pumpkin
+Radish Tops 
+Romaine lettuce 
+Spinach 
+Spring Greens
+Squash 
+Turnip 
+Watercress</pre>
+              </div>
+              <div class="box">
+                <pre><u>Which fruits can rabbits eat?</u>
+
+Apple 
+Apricot
+Banana 
+Blackberries 
+Blueberries
+Cherries 
+Grapes
+Kiwi Fruit
+Mango
+Melon
+Nectarines
+Papaya
+Peaches
+Pears
+Pineapple
+Plums
+Raspberries
+Strawberries 
+Tomatoes </pre>
+              </div>
+              <div class="box">
+                <pre><u>Safe herbs for bunnies</u>
+
+Basil
+Coriander
+Dill
+Mint (peppermint)
+Parsley - not too much as high in calcium
+Oregano
+Rosemary
+Sage
+Thyme</pre>
+              </div>
+              <div class="box">
+                <pre><u>Wild garden herbs, weeds and flowers</u>
+
+Borage
+Calendula
+Camomile
+Chickweed (astringent)
+Clover (leaves and flowers)
+Coltsfoot
+Comfrey
+Dandelion (diuretic properties)
+Goosegrass (cleavers) but may stick to coat!
+Lavender
+Mallow
+Nettle
+Nasturtium (leaves and flowers)
+Shepherd’s purse
+Sow Thistle
+Plantain
+Yarrow</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="pets-button">
+          <img id="pets-picture" src="./media/paw-icon.png" class="button-active">
+          <span class="button-hover">Rabbits as Pets</span>
+        </button>
+
+        <div id="pets" class="modal">
+          <div class="modal-content">
+            <span id="pets-close" class="close">X</span>
+            <h2 class="modal-title">
+              <a href="http://rabbit.org/living-with-a-house-rabbit-2/" target="_blank">Rabbits as Pets</a>
+            </h2>
+            <div id="pets-list">
+              <div class="box">
+                <pre><u>Why a House Rabbit?</u>
+
+Perhaps you’ve just adopted your first rabbit, or maybe you already have a rabbit and would like more information to help you understand her better. House Rabbit Society, a national nonprofit organization, recommends that you keep your rabbit in the house rather than outdoors. Rabbits are intelligent, social animals who need affection, and they can become wonderful companion animals if given a chance to interact with their human families.</pre>
+              </div>
+              <div class="box">
+                <pre><u>Housetraining</u>
+
+Rabbits may have free run of the home. However, it’s best for most–and necessary for some–to start with a space they can call their own. This can be an exercise pen, a large dog crate, a bunny proofed room, or a very large cage or condo. To make this confined time learning time, make sure that there’s a litterbox in the corner of the space that your rabbit chooses for a “bathroom.” As soon as he uses the box consistently, you can give him some freedom. Place one or more large litterboxes in corners of the running area outside the rabbit’s home base.
+Use only positive reinforcement (treats and praise)–never punishment.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="pictures" class="section-Pictures">
-    <div class="picture-content"></div>
-    <div class="text-content">
+
+
+
+  <section id="pictures" class="sections">
+    <div class="pictures-content">
       <h1>Pictures</h1>
-      <pre>    
-                                   X
-                                   XX
-                          X        XXX
-                          XX       XXXX
-                          XXX      XXXX
-                          XXXX     XXXX
-                          XXXXX    XXXX
-                           XXXXX   XXXX
-                            XXXXX  XXXX
-                             XXXX  XXXX
-                              XXX  XXX
-                               XX  XX
-                              XXXXXXXXXX
-                             XXXXXXXXXXXXX
-                             XXXXXXXXXXXXXX
-                             XXXXXXXXXXXXXX
-                             XXXXXXXXXXXXX
-                              XXXXXXXXXX
-                              XXXXXXXXX
-                             XXXXXXXXXX
-                           XXXXXXXXXXXX
-                         XXXXXXXXXXXXXX
-                       XXXXXXXXXXXXXXXXX
-                     XXXXXXXXXXXXXXXXXXX
-                   XXXXXXXXXXXXXXXXXXXXX
-                 XXXXXXXXXXXXXXXXXXXXXXX
-               XXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXX
-             XXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXXX
-   XXXXX    XXXXXXXXXXXXXXXXXXXXXXXXXXX
- XXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXX XXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX      XXXXX
- XXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   XXXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       
-
-
-                _, _,
-           .' .' |
-          /  /   /
-         _|_/__.'
-       .'   `\
-      ( ^     \
-       '.__    \
-          _)    '.
-      _.-'/       '.
-     (__.'          \
-      .' .-.         ;
-     (_.'   \        |`\
-          .--\      /   |
-         (__.-'    /'--'
-     jgs   (______(
-
-           ,_ ,_
-           | '. '. 
-           \   \  \
-            '.__\_|_
-                /`  '.
-               /    ^ )
-              /   __.'
-            .'   (_
-          .'      \'-._
-         /         '.__)
-        ;        .-. '.
-      /`|       /   '._)
-     |   \     /--.
-      '--'\   '-.__)
-       jgs )_____) 
-</pre>
-      <p>Clearly bunnies are much cuter than Fennec Foxes</p>
+      <p>Here are some cute pictures of rabbits.</p>
+      <div class="carouselbox">
+        <div class="buttons">
+          <button class="prev">
+            <!-- ◀ <span class="offscreen"></span> -->
+            <span id="prev-arrow"><</span>
+          </button>
+          <button class="next">
+            <!-- <span class="offscreen"></span> ▶  -->
+            <span id="next-arrow">></span>
+          </button>
+        </div>
+        <!-- <div class="links-outer"> -->
+          <ul class="content">
+            <li><img src="./media/bunny2.jpg"></li>
+            <li><img src="./media/bunny3.jpg"></li>
+            <li><img src="./media/bunny4.jpg"></li>
+            <li><img src="./media/bunny5.jpg"></li>
+            <li><img src="./media/bunny6.jpg"></li>
+          </ul>
+        <!-- </div> -->
+      </div>
+      
     </div>
   </section>
-  <section id="contact" class="section-Contact">
-    <div class="contact-content"></div>
-    <div class="text-content"></div>
-  </section>
+  <footer id="contact" class="sections">
+    <div class="contact-content-outer">
+      <div class="contact-content-inner">
+        <!-- <ul id="social-links"> -->
+          <!-- <li> -->
+            <a href="https://www.facebook.com/grant.young.9235" target="_blank">
+              <img src="./media/facebook.svg" class="icon">
+            </a>
+          <!-- </li> -->
+          <!-- <li> -->
+            <a href="https://www.twitter.com/?lang=en" target="_blank">
+              <img src="./media/twitter.svg" class="icon">
+            </a>
+          <!-- </li> -->
+          <!-- <li> -->
+            <a href="https://www.github.com/gpyoung9/" target="_blank">
+              <img src="./media/github.svg" class="icon">
+            </a>
+          <!-- </li> -->
+        <!-- </ul> -->
+      </div>
+    </div>  
+  </footer>
 
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>

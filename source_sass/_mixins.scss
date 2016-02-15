@@ -1,0 +1,29 @@
+@mixin break-inside($value) {
+	page-break-inside: $value; 
+	-webkit-column-break-inside: $value; 
+	break-inside: $value;
+}
+
+@mixin break-after($value) {
+	-webkit-column-break-after: $value;
+	-moz-column-break-after: $value;
+	column-break-after: $value;
+}
+
+@mixin columns($number) {
+	-webkit-column-count: $number; 
+    -moz-column-count: $number; 
+    column-count: $number;
+}
+
+@mixin column-rule-style($style) {
+	-webkit-column-rule-style: $style; 
+	-moz-column-rule-style: $style; 
+	column-rule-style: $style;
+}
+
+@mixin column-width($width) {
+	-webkit-column-width: $width;
+	-moz-column-width: $width; 
+	column-width: $width;
+}
