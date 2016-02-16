@@ -82,7 +82,7 @@ section {
 
 header {
 	color: white;
-	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	@include text-shadow(white);
 	padding-top: 125px;
 	text-align: center;
 	height: 550px;
@@ -100,7 +100,8 @@ header {
 #about {
 
 	h1 {
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		font-size: 50px;
+		@include text-shadow(white);
 		padding-bottom: 20px;
 	}
 	
@@ -161,8 +162,6 @@ header {
 	}
 
 	button:hover .button-hover {
-		/*height: 128px;*/
-		/*width: 128px;*/
 		display: block;
 	}
 
@@ -198,17 +197,17 @@ header {
     		padding-bottom: 20px;
 
 	    	#types-link {
-    			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    			@include text-shadow(black);
 	    		color: $green;
 	    	}
 
 	    	#food-link {
-				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				@include text-shadow(black);
 				color: $orange;
 	    	}
 
 	    	#pets-link {
-	    		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	    		@include text-shadow(black);
 	    		color: $brown;
 	    	}
     	}
@@ -243,17 +242,17 @@ header {
 	}
 
 	#types-close {
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		@include text-shadow(black);
 		color: $green;
 	}
 
 	#food-close {
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		@include text-shadow(black);
 		color: $orange;
 	}
 
 	#pets-close {
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		@include text-shadow(black);
 		color: $brown;
 	}
 
@@ -272,8 +271,11 @@ header {
 }
 
 #pictures {
+	font-size: 30px;
+
 	h1 {
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		font-size: 50px;
+		@include text-shadow(white);
 		padding-bottom: 20px;
 	}
 
@@ -283,49 +285,47 @@ header {
 	    position: relative;
 	    margin: 0 auto;
 	    overflow: hidden;
-		display: table;
 		    
-	    #prev {
-	    	float: left;
+	    #prev-arrow {
+	    	left: 0;
+	    	position: absolute;
 	    }
 
-	    #next {
-	    	float: right;
+	    #next-arrow {
+	    	z-index: 20;
+	    	right: 0;
+	    	position: absolute;
 	    }
 
 		button {
 			font-size: 40px;
 		    border: none;
-		    display: none;
 
 		}
 
 		.content {
 		    margin: 0;
 		    padding: 0;
-				/*display: table-cell;*/
-				/*vertical-align: middle;*/
-			
-			/*.links-outer {*/
-				/*width: 100%;*/
+		    display: block;
 
-				li {
-					/*display: table-cell;*/
-					/*vertical-align: middle;*/
-				    font-size: 100px;
-				    margin: 0;
-				    padding: 0;
-				    width: 100%;
-				    list-style: none;
-				    text-align: center;
-				}
-			/*}*/
+			li {
+				display: block;
+			    font-size: 100px;
+			    margin-top: 50px;
+			    padding: 0;
+			    width: 100%;
+			    list-style: none;
+			    text-align: center;
+
+			    img {
+			    	max-width: 1000px;
+			    }
+			}
 		}
 	}
 	
 
 	.active {
-	    width: 100%;
 
 		li {
 			visibility: hidden;
@@ -350,7 +350,6 @@ header {
 		
 		.buttons {
 		    padding: 5px 0;
-		    /*background: #eee;*/
 		    text-align: center;
 		    z-index: 10;
 		    position: relative;
@@ -367,21 +366,39 @@ header {
 	}
 }
 
+#contact {
+	font-size: 30px;
+	text-align: center;
+
+	h1 {
+		font-size: 50px;
+		@include text-shadow(white);
+		color: $brown;
+	}
+
+	.contact-outer {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		width: 100%;
+		display: table;
+
+		.contact-inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
 footer {
 
-	/*.contact-content-outer {*/
-		
-		/*.contact-content-inner {*/
 	display: inline;
 	text-align: center;
-	background-color: $brown;
+	background: $brown;
 
 	.icon {
 		display: inline;
 		height: 60px;
 		width: 60px;
 	}
-		/*}*/
-	/*}*/
 }
 

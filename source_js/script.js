@@ -15,7 +15,7 @@ $(window).scroll(function() {
 
 $(window).scroll(function() {
 	var scrolled_val = $(document).scrollTop();
-    var nav_val = $('nav-bar').height();
+    var nav_val = $('#nav-bar').height();
     var curr_val = scrolled_val + nav_val;
 
     var sections = document.getElementsByClassName('sections');
@@ -24,11 +24,13 @@ $(window).scroll(function() {
     	var height = $(sections[i]).height();
     	if (curr_val >= position.top && curr_val <= position.top + height){
     		var id = '#' + $(sections[i]).attr('id') + "-link";
-    		console.log(id);
     		$(id).addClass('active');
-    		if (i > 0){
-    			$(id).removeClass('active');
-    			// remove from all others.
+    		for (var j = 0; j < sections.length; j++){
+    			var other_id = '#' + $(sections[j]).attr('id') + '-link';
+    			if (other_id === id){
+    				continue;
+    			}	
+    			$(other_id).removeClass('active');
     		}
     	}
 
@@ -37,10 +39,13 @@ $(window).scroll(function() {
 	var scrollPosition = $(window).height() + $(window).scrollTop();
 	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 	    var id = '#' + $(sections[sections.length - 1]).attr('id') + "-link";
-	    console.log(id);
 	    $(id).addClass('active');
-	    if (i > 0){
-	    	$(id).removeClass('active');
+	    for (var j = 0; j < sections.length; j++){
+	    	var other_id = '#' + $(sections[j]).attr('id') + '-link';
+	    	if (other_id === id){
+	    		continue;
+	    	}	
+	    	$(other_id).removeClass('active');
 	    }
 	}
 });
@@ -92,92 +97,7 @@ window.onclick = function(event) {
     }
 }
 
-// var abouts = document.getElementsByClassName("modal");
 
-// for (var i = 0; i < abouts.length; i++){
-// 	var modal = document.getElementById(abouts[i]);
-// 	var button = document.getElementById(abouts[i] + "-button");
-// 	var span = document.getElementById(abouts[i] + "-close");
-// 	button.onclick = function() {
-// 	    modal.style.display = "block";
-// 	}
-
-// 	span.onclick = function() {
-// 	    modal.style.display = "none";
-// 	}
-
-// 	window.onclick = function(event) {
-// 	    if (event.target == modal) {
-// 	        modal.style.display = "none";
-// 	    }
-// 	}
-// }
-
-// carousel = (function(){
-//   var box = document.querySelector('.carouselbox');
-//   var next = box.querySelector('.next');
-//   var prev = box.querySelector('.prev');
-//   var items = box.querySelectorAll('.content li');
-//   var counter = 0;
-//   var amount = items.length;
-//   var current = items[0];
-//   box.classList.add('active');
-//   function navigate(direction) {
-//     current.classList.remove('current');
-//     counter = counter + direction;
-//     if (direction === -1 && 
-//         counter < 0) { 
-//       counter = amount - 1; 
-//     }
-//     if (direction === 1 && 
-//         !items[counter]) { 
-//       counter = 0;
-//     }
-//     current = items[counter];
-//     current.classList.add('current');
-//   }
-//   next.addEventListener('click', function(ev) {
-//     navigate(1);
-//   });
-//   prev.addEventListener('click', function(ev) {
-//     navigate(-1);
-//   });
-//   navigate(0);
-// })();
-
-// carousel = (function() {
-// 	var container = document.querySelector('.carousel');
-// 	var next =  container.querySelector('.next');
-// 	var prev = container.querySelector('.prev');
-// 	var pictures = container.querySelectorAll('.content li');
-// 	var counter = 0;
-// 	var current_pic = pictures[0];
-
-// 	container.classList.add('active');
-
-// 	function navigate(direction) {
-// 		current_pic.classList.remove('current');
-// 		counter = counter + direction;
-		
-// 		if (direction === -1 && counter < 0){
-// 			counter = pictures.length - 1;
-// 		}
-
-// 		if (direction === 1 && !pictures[counter]){
-// 			counter = 0;
-// 		}
-// 		current_pic = items[counter];
-// 		current_pic.classList.add('current');
-// 	}
-
-// 	next.addEventListener('click', function(e) {
-// 		navigate(1);
-// 	})
-// 	prev.addEventListener('click', function(e) {
-// 		navigate(-1);
-// 	})
-// 	navigate(0);
-// });
 
 carousel = (function(){
   var box = document.querySelector('.carouselbox');
@@ -191,7 +111,6 @@ carousel = (function(){
 
   function navigate(direction) {
     current.classList.remove('current');
-    // current.classList.add('notcurrent');
     counter = counter + direction;
     if (direction === -1 && 
         counter < 0) { 
@@ -202,7 +121,6 @@ carousel = (function(){
       counter = 0;
     }
     current = items[counter];
-    // current.classList.add('fadeIn');
     current.classList.add('current');
   }
 
