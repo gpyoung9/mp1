@@ -5,6 +5,10 @@ $('a[href^="#"]').on('click', function(e) {
      }, 300);
 });
 
+$(window).ready(function() {
+	$('#home-link').addClass('active');
+})
+
 $(window).scroll(function() {
   if ($(document).scrollTop() > 50) {
     $('nav').addClass('shrink');
